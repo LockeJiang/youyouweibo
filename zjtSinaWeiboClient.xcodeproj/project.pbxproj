@@ -192,6 +192,7 @@
 		ABFBB6F21595A13B00F3B265 /* UserCDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFBB6F11595A13B00F3B265 /* UserCDItem.m */; };
 		ABFBB6F51595A13C00F3B265 /* StatusCDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFBB6F41595A13C00F3B265 /* StatusCDItem.m */; };
 		ABFDE1FB14B5A0EC00B57C9F /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFDE1F914B5A0EC00B57C9F /* StatusCell.m */; };
+		F1594827189D60420077C102 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1594826189D60420077C102 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -468,6 +469,7 @@
 		ABFDE20F14B5A25100B57C9F /* publish_button_16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = publish_button_16.gif; sourceTree = "<group>"; };
 		ABFDE21014B5A25100B57C9F /* publish_button_24.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = publish_button_24.gif; sourceTree = "<group>"; };
 		ABFDE21114B5A25100B57C9F /* publish_button_32.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = publish_button_32.gif; sourceTree = "<group>"; };
+		F1594826189D60420077C102 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,6 +711,7 @@
 		ABA94F2A147FA7F70010C283 = {
 			isa = PBXGroup;
 			children = (
+				F1594826189D60420077C102 /* Default-568h@2x.png */,
 				AB25586C15AB1DBF00CF8F4B /* CoreLocation.framework */,
 				AB783D5D159B4C5500C3E688 /* CoreText.framework */,
 				AB35226815937F92001885BE /* CoreData.framework */,
@@ -1036,6 +1039,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					ABA94F34147FA7F70010C283 = {
+						DevelopmentTeam = G8K45G3SK6;
+					};
+				};
 			};
 			buildConfigurationList = ABA94F2F147FA7F70010C283 /* Build configuration list for PBXProject "zjtSinaWeiboClient" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1088,6 +1096,7 @@
 				AB2FD353155ABBCE00465A00 /* 16x16.png in Resources */,
 				AB2FD354155ABBCE00465A00 /* 240.png in Resources */,
 				AB2FD355155ABBCE00465A00 /* 32.png in Resources */,
+				F1594827189D60420077C102 /* Default-568h@2x.png in Resources */,
 				AB2FD356155ABBCE00465A00 /* 32x32.png in Resources */,
 				AB2FD357155ABBCE00465A00 /* 48.png in Resources */,
 				AB2FD358155ABBCE00465A00 /* 48x48.png in Resources */,
@@ -1284,7 +1293,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "09038182-35A1-4BC7-A1DB-57C1CA900A71";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
 		};
@@ -1302,7 +1311,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1310,8 +1319,8 @@
 		ABA94F62147FA7F70010C283 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zhu wei (J2K345S659)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhu wei (J2K345S659)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang Jian (UAQJRVGG6R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang Jian (UAQJRVGG6R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zjtSinaWeiboClient/zjtSinaWeiboClient-Prefix.pch";
 				INFOPLIST_FILE = "zjtSinaWeiboClient/zjtSinaWeiboClient-Info.plist";
@@ -1320,8 +1329,9 @@
 					"\"$(SRCROOT)/zjtSinaWeiboClient/WeiboEngine\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "691CA5EB-4E24-450B-B318-D1DD6C4B4E11";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "691CA5EB-4E24-450B-B318-D1DD6C4B4E11";
+				PROVISIONING_PROFILE = "5B1012E8-5A21-4DEB-94AD-0E014CC059A6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B1012E8-5A21-4DEB-94AD-0E014CC059A6";
+				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1329,8 +1339,8 @@
 		ABA94F63147FA7F70010C283 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zhu wei (J2K345S659)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zhu wei (J2K345S659)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang Jian (UAQJRVGG6R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang Jian (UAQJRVGG6R)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zjtSinaWeiboClient/zjtSinaWeiboClient-Prefix.pch";
 				INFOPLIST_FILE = "zjtSinaWeiboClient/zjtSinaWeiboClient-Info.plist";
@@ -1339,8 +1349,10 @@
 					"\"$(SRCROOT)/zjtSinaWeiboClient/WeiboEngine\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28D40E0A-5FBD-4D06-80D8-D461AFEE3743";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BFE55534-6227-4E7C-89B9-447AEA73A1F5";
+				PROVISIONING_PROFILE = "5B1012E8-5A21-4DEB-94AD-0E014CC059A6";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5B1012E8-5A21-4DEB-94AD-0E014CC059A6";
+				SDKROOT = iphoneos7.1;
+				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
