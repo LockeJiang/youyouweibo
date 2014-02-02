@@ -293,6 +293,14 @@ enum  {
     CGRect frame = table.frame;
     frame.size.height = frame.size.height + REFRESH_FOOTER_HEIGHT;
     table.frame = frame;
+    
+    //解决tableview被导航栏遮挡的问题
+    if( ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+    }
+
 }
 
 -(void)viewDidUnload
