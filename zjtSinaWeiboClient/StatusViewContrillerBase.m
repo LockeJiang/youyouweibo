@@ -408,7 +408,7 @@
             CGRect frame = browserView.imageView.frame;
             frame.size = size;
             frame.origin.x = 0;
-            CGFloat y = (480.0 - size.height)/2.0;
+            CGFloat y = (568.0 - size.height)/2.0;
             frame.origin.y = y >= 0 ? y:0;
             browserView.imageView.frame = frame;
             if (browserView.imageView.frame.size.height > 480) {
@@ -438,7 +438,7 @@
     BOOL isRetwitter = sts.retweetedStatus && sts.retweetedStatus.originalPic != nil;
     UIApplication *app = [UIApplication sharedApplication];
     
-    CGRect frame = CGRectMake(0, 0, 320, 480);
+    CGRect frame = CGRectMake(0, 0, 320, 568);
     if (browserView == nil) {
         self.browserView = [[[ImageBrowser alloc]initWithFrame:frame] autorelease];
         [browserView setUp];
