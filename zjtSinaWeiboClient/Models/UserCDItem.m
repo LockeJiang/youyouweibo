@@ -19,6 +19,7 @@
 @dynamic favoritesCount;
 @dynamic followersCount;
 @dynamic following;
+@dynamic follow_me;
 @dynamic friendsCount;
 @dynamic gender;
 @dynamic geoEnabled;

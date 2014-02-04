@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5029" systemVersion="13B42" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Images" representedClassName="Images" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -14,7 +14,9 @@
         <attribute name="hasReply" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hasRetwitter" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="haveRetwitterImage" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES" isSyncIdentityProperty="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES" isSyncIdentityProperty="YES">
+            <userInfo/>
+        </attribute>
         <attribute name="inReplyToScreenName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="inReplyToStatusId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="inReplyToUserId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -42,6 +44,7 @@
         <attribute name="createdAt" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="domain" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favoritesCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="follow_me" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="followersCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="following" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="friendsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -63,6 +66,6 @@
     <elements>
         <element name="Images" positionX="160" positionY="192" width="128" height="90"/>
         <element name="StatusCDItem" positionX="160" positionY="192" width="128" height="465"/>
-        <element name="UserCDItem" positionX="160" positionY="192" width="128" height="390"/>
+        <element name="UserCDItem" positionX="160" positionY="192" width="128" height="405"/>
     </elements>
 </model>

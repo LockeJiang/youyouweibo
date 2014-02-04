@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSNumber * favoritesCount;
 @property (nonatomic, retain) NSNumber * followersCount;
 @property (nonatomic, retain) NSNumber * following;
+@property (nonatomic, retain) NSNumber * follow_me;
 @property (nonatomic, retain) NSNumber * friendsCount;
 @property (nonatomic, retain) NSNumber * gender;
 @property (nonatomic, retain) NSNumber * geoEnabled;

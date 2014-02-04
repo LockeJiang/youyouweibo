@@ -935,7 +935,10 @@
         NSMutableArray  *statuesArr = [[NSMutableArray alloc]initWithCapacity:0];
         for (id item in arr) {
             Status* sts = [Status statusWithJsonDictionary:item];
-            [statuesArr addObject:sts];
+            //微博过滤代码可行接入点：1，未生效：首页未生效
+            if (!sts.user.follow_me) {
+                [statuesArr addObject:sts];
+            }
         }
         if ([delegate respondsToSelector:@selector(didGetPublicTimelineWithStatues:)]) {
             [delegate didGetPublicTimelineWithStatues:statuesArr];
@@ -1142,7 +1145,10 @@
         NSMutableArray  *statuesArr = [[NSMutableArray alloc]initWithCapacity:0];
         for (id item in arr) {
             Status* sts = [Status statusWithJsonDictionary:item];
-            [statuesArr addObject:sts];
+            //  微博过滤点2:生效！
+            if (sts.user.follow_me) {
+                [statuesArr addObject:sts];
+            }
         }
         NSString *isRefresh = [userInformation objectForKey:@"isRefresh"];
         if ([isRefresh isEqualToString:@"YES"]) {

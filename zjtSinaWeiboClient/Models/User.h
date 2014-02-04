@@ -33,6 +33,7 @@ typedef enum {
     int    favoritesCount; //收藏数
 	time_t      createdAt; //创建时间
     BOOL        following; //是否已关注(此特性暂不支持)
+    BOOL        follow_me; //是否关注我(此特性暂不支持)
     BOOL        verified; //加V标示，是否微博认证用户
 	BOOL		allowAllActMsg; //?
 	BOOL		geoEnabled; //?
@@ -57,6 +58,7 @@ typedef enum {
 @property (nonatomic, assign) int  favoritesCount;
 @property (nonatomic, assign) time_t	createdAt;
 @property (nonatomic, assign) BOOL      following;
+@property (nonatomic, assign) BOOL      follow_me;
 @property (nonatomic, assign) BOOL		verified;
 @property (nonatomic, assign) BOOL		allowAllActMsg;
 @property (nonatomic, assign) BOOL		geoEnabled;
