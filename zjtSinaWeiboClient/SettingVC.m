@@ -58,7 +58,7 @@ enum {
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"更多...";
+        self.title = @"更多";
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
         
     }

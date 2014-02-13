@@ -14,7 +14,7 @@
 #import "ZJTHelpler.h"
 #import "HotTrendsVC.h"
 
-#define kLineBreakMode              UILineBreakModeWordWrap
+#define kLineBreakMode            NSLineBreakByWordWrapping
 
 enum {
     kSinaVerifiedRow = 0,
@@ -90,10 +90,10 @@ enum {
     weiboButton.titleLabel.numberOfLines = 2;
     topicButton.titleLabel.numberOfLines = 2;
         
-    [fansButton.titleLabel setTextAlignment:UITextAlignmentCenter];
-    [idolButton.titleLabel setTextAlignment:UITextAlignmentCenter];
-    [weiboButton.titleLabel setTextAlignment:UITextAlignmentCenter];
-    [topicButton.titleLabel setTextAlignment:UITextAlignmentCenter];
+    [fansButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [idolButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [weiboButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [topicButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     
     [self updateWithUser:user];
     [table setTableHeaderView:tableHeaderView];

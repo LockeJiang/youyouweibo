@@ -34,7 +34,7 @@
     
     CGSize size = [string sizeWithFont:font 
                      constrainedToSize:CGSizeMake(lineWidth, lineHeight*1000.0f) 
-                         lineBreakMode:UILineBreakModeTailTruncation]; 
+                         lineBreakMode:NSLineBreakByWordWrapping];
     // Get the total height, divide by the height of one line to get the # of lines.
     return size.height / lineHeight;
 }

@@ -122,7 +122,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 
 	// RFC 2612 says max-age must override any Expires header
 	if (maxAge) {
-		return [[NSDate date] addTimeInterval:maxAge];
+		return [[NSDate date] dateByAddingTimeInterval:maxAge];
 	} else {
 		NSString *expires = [responseHeaders objectForKey:@"Expires"];
 		if (expires) {

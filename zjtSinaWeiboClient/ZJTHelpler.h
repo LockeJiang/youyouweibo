@@ -11,7 +11,7 @@
 #import "User.h"
 @class ZJTHelpler;
 #define kTextViewPadding            16.0
-#define kLineBreakMode              UILineBreakModeWordWrap
+#define kLineBreakMode              NSLineBreakModeWordWrap
 
 @interface ZJTHelpler : NSObject
 {

@@ -142,7 +142,7 @@
 
 //temp
 //获取最新的公共微博
--(void)getPublicTimelineWithCount:(int)count withPage:(int)page;
+-(void)getPublicTimeLine:(int64_t)sinceID maxID:(int64_t)maxID count:(int)count page:(int)page baseApp:(int)baseApp feature:(int)feature;
 
 //获取登陆用户的UID
 -(void)getUserID;

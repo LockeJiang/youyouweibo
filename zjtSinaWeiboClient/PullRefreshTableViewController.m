@@ -93,7 +93,7 @@
     lastUpdatedLabel.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     lastUpdatedLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     lastUpdatedLabel.backgroundColor = [UIColor clearColor];
-    lastUpdatedLabel.textAlignment = UITextAlignmentCenter;
+    lastUpdatedLabel.textAlignment = NSTextAlignmentCenter;
     lastUpdatedLabel.hidden = YES;
     
     refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, REFRESH_FOOTER_HEIGHT - 55.0f, 320.0f, 20.0f)];
@@ -103,7 +103,7 @@
     refreshLabel.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     refreshLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
     refreshLabel.backgroundColor = [UIColor clearColor];
-    refreshLabel.textAlignment = UITextAlignmentCenter;
+    refreshLabel.textAlignment = NSTextAlignmentCenter;
 
     refreshArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blueArrow.png"]];
     refreshArrow.frame = CGRectMake(floorf((REFRESH_FOOTER_HEIGHT - 30) / 2),

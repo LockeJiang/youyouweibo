@@ -391,7 +391,7 @@
 -(CGFloat)cellHeight:(NSString*)contentText with:(CGFloat)with
 {
     UIFont * font=[UIFont  systemFontOfSize:14];
-    CGSize size=[contentText sizeWithFont:font constrainedToSize:CGSizeMake(with - kTextViewPadding, 300000.0f) lineBreakMode:kLineBreakMode];
+    CGSize size=[contentText sizeWithFont:font constrainedToSize:CGSizeMake(with - kTextViewPadding, 300000.0f) lineBreakMode:NSLineBreakByWordWrapping];
     CGFloat height = size.height + 44;
     return height;
 }

@@ -11,7 +11,7 @@
 #import "TwitterVC.h"
 #import "OAuthWebView.h"
 
-@interface FirstViewController : StatusViewContrillerBase
+@interface BilateralTableViewController : StatusViewContrillerBase
 {
     NSString *userID;
     int _page;

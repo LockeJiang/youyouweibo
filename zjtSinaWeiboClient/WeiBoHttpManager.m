@@ -129,23 +129,50 @@
     return url;
 }
 
--(void)getPublicTimelineWithCount:(int)count withPage:(int)page
+-(void)getPublicTimeline:(int64_t)sinceID maxID:(int64_t)maxID count:(int)count page:(int)page baseApp:(int)baseApp feature:(int)feature;
 {
-    //https://api.weibo.com/2/statuses/public_timeline.json
+    //https://api.weibo.com/2/statuses/bilateral_timeline.json  懒得写了，借用
     self.authToken = [[NSUserDefaults standardUserDefaults] objectForKey:USER_STORE_ACCESS_TOKEN];
-    NSString                *countString = [NSString stringWithFormat:@"%d",count];
-    NSString                *pageString = [NSString stringWithFormat:@"%d",page];
-    NSMutableDictionary     *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                       authToken,   @"access_token",
-                                       countString, @"count",
-                                       pageString,  @"page",
-                                       nil];
-    NSString                *baseUrl =[NSString  stringWithFormat:@"%@/statuses/public_timeline.json",SINA_V2_DOMAIN];
+    self.userId = [[NSUserDefaults standardUserDefaults] objectForKey:USER_STORE_USER_ID];
+    
+    NSMutableDictionary     *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:authToken,@"access_token",nil];
+    if (sinceID >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%lld",sinceID];
+        [params setObject:tempString forKey:@"since_id"];
+    }
+    if (maxID >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%lld",maxID];
+        [params setObject:tempString forKey:@"max_id"];
+    }
+    if (count >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%d",count];
+        [params setObject:tempString forKey:@"count"];
+    }
+    if (page >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%d",page];
+        [params setObject:tempString forKey:@"page"];
+    }
+    if (baseApp >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%d",baseApp];
+        [params setObject:tempString forKey:@"baseApp"];
+    }
+    if (feature >= 0) {
+        NSString *tempString = [NSString stringWithFormat:@"%d",feature];
+        [params setObject:tempString forKey:@"feature"];
+    }
+    
+    NSString                *baseUrl =[NSString  stringWithFormat:@"%@/statuses/bilateral_timeline.json",SINA_V2_DOMAIN];
     NSURL                   *url = [self generateURL:baseUrl params:params];
     
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
     NSLog(@"url=%@",url);
-    [self setGetUserInfo:request withRequestType:SinaGetPublicTimeline];
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:[NSNumber numberWithInt:SinaGetPublicTimeline] forKey:USER_INFO_KEY_TYPE];
+    if (maxID>0) {
+        [dict setObject:@"YES" forKey:@"isRefresh"];
+    }
+    [request setUserInfo:dict];
+    [dict release];
     [requestQueue addOperation:request];
     [request release];
 }
@@ -897,7 +924,7 @@
     NSDictionary *userInformation = [request userInfo];
     RequestType requestType = [[userInformation objectForKey:USER_INFO_KEY_TYPE] intValue];
     NSString * responseString = [request responseString];
-    NSLog(@"responseString = %@",responseString);
+   // NSLog(@"responseString = %@",responseString);
     
     //认证失败
     //{"error":"auth faild!","error_code":21301,"request":"/2/statuses/home_timeline.json"}
@@ -936,12 +963,12 @@
         for (id item in arr) {
             Status* sts = [Status statusWithJsonDictionary:item];
             //微博过滤代码可行接入点：1，未生效：首页未生效
-            if (!sts.user.follow_me) {
+           // if (!sts.user.follow_me) {
                 [statuesArr addObject:sts];
-            }
+            //}
         }
-        if ([delegate respondsToSelector:@selector(didGetPublicTimelineWithStatues:)]) {
-            [delegate didGetPublicTimelineWithStatues:statuesArr];
+        if ([delegate respondsToSelector:@selector(didGetPublicTimeLine:)]) {
+            [delegate didGetPublicTimeLine:statuesArr];
         }
         [statuesArr release];
     }
@@ -1146,7 +1173,7 @@
         for (id item in arr) {
             Status* sts = [Status statusWithJsonDictionary:item];
             //  微博过滤点2:生效！
-            if (sts.user.follow_me) {
+            if (!sts.user.follow_me) {
                 [statuesArr addObject:sts];
             }
         }

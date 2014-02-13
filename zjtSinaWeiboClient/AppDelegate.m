@@ -14,6 +14,7 @@
 #import "FollowAndFansVC.h"
 #import "MetionsStatusesVC.h"
 #import "ZJTProfileViewController.h"
+#import "BilateralTableViewController.h"
 
 @implementation AppDelegate
 
@@ -35,24 +36,29 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.window.tag = 0;
     
+    BilateralTableViewController *bilateral = [[[BilateralTableViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
     FirstViewController *firstViewController = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
     MetionsStatusesVC *m = [[MetionsStatusesVC alloc]initWithNibName:@"FirstViewController" bundle:nil];
     ZJTProfileViewController *profile = [[[ZJTProfileViewController alloc] initWithNibName:@"ZJTProfileViewController" bundle:nil] autorelease ];
-    FollowAndFansVC *followingVC = [[[FollowAndFansVC alloc] initWithNibName:@"FollowAndFansVC" bundle:nil] autorelease];
+    //FollowAndFansVC *followingVC = [[[FollowAndFansVC alloc] initWithNibName:@"FollowAndFansVC" bundle:nil] autorelease];
     SettingVC *settingVC = [[[SettingVC alloc] initWithNibName:@"SettingVC" bundle:nil] autorelease];
     
-    followingVC.title = @"好友";
-    m.title = @"@我";
+    //followingVC.title = @"好友";
+    m.title = @"消息";
     profile.title = @"我的微博";
+    bilateral.title = @"朋友圈";
+    firstViewController.title = @"关注";
     
-    UINavigationController *nav1 = [[[UINavigationController alloc]initWithRootViewController:firstViewController] autorelease];
-    UINavigationController *nav2 = [[[UINavigationController alloc] initWithRootViewController:m] autorelease];
-    UINavigationController *nav3 = [[[UINavigationController alloc] initWithRootViewController:followingVC] autorelease];
-    UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:profile] autorelease];
-    UINavigationController *nav5 = [[[UINavigationController alloc] initWithRootViewController:settingVC] autorelease];
+    UINavigationController *nav1 = [[[UINavigationController alloc] initWithRootViewController:bilateral] autorelease];
+    UINavigationController *nav2 = [[[UINavigationController alloc] initWithRootViewController:firstViewController] autorelease];
+    UINavigationController *nav3 = [[[UINavigationController alloc] initWithRootViewController:m] autorelease];
+   //  UINavigationController *nav3 = [[[UINavigationController alloc] initWithRootViewController:followingVC] autorelease];
+   // UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:profile] autorelease];
+    UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:settingVC] autorelease];
+    
     
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1, nav2,nav3,nav4,nav5,nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4,nil];
 //    self.tabBarController.selectedIndex = 2;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible]; 

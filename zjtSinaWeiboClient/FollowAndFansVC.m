@@ -400,7 +400,7 @@ enum{
         lastCell.selectionStyle = UITableViewCellSelectionStyleNone;
         lastCell.textLabel.font = [UIFont systemFontOfSize:14];
         lastCell.textLabel.textColor = [UIColor darkGrayColor];
-        lastCell.textLabel.textAlignment = UITextAlignmentCenter;
+        lastCell.textLabel.textAlignment = NSTextAlignmentCenter;
         
         if (row == 0)
             lastCell.textLabel.text = @"正在载入...";

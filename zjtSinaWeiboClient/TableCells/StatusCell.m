@@ -224,13 +224,13 @@
     UITapGestureRecognizer*tap = (UITapGestureRecognizer*)sender;
     
     UIImageView *imageView = (UIImageView*)tap.view;
-    if ([imageView isEqual:contentImage]) {
+    if ([imageView isEqual:contentImage] && contentImage) {
         if ([delegate respondsToSelector:@selector(cellImageDidTaped:image:)]) 
         {
             [delegate cellImageDidTaped:self image:contentImage.image];
         }
     }
-    else if ([imageView isEqual:retwitterContentImage])
+    else if ([imageView isEqual:retwitterContentImage] && retwitterContentImage)
     {
         if ([delegate respondsToSelector:@selector(cellImageDidTaped:image:)])
         {

@@ -56,9 +56,9 @@ static WeiBoMessageManager * instance=nil;
 
 //temp
 //获取最新的公共微博
--(void)getPublicTimelineWithCount:(int)count withPage:(int)page
+-(void)getPublicTimeLine:(int64_t)sinceID maxID:(int64_t)maxID count:(int)count page:(int)page baseApp:(int)baseApp feature:(int)feature
 {
-    [httpManager getPublicTimelineWithCount:count withPage:page];
+    [httpManager getPublicTimeline:(int64_t)sinceID maxID:(int64_t)maxID count:(int)count page:(int)page baseApp:(int)baseApp feature:(int)feature];
 }
 
 //获取登陆用户的UID
@@ -253,8 +253,11 @@ static WeiBoMessageManager * instance=nil;
 
 #pragma mark - WeiBoHttpDelegate
 //获取最新的公共微博
--(void)didGetPublicTimelineWithStatues:(NSArray *)statusArr
+-(void)didGetPublicTimeLine:(NSArray *)statusArr
 {
+    if (statusArr == nil || [statusArr count] == 0) {
+        return;
+    }
     NSNotification *notification = [NSNotification notificationWithName:MMSinaGotPublicTimeLine object:statusArr];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
