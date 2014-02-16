@@ -27,22 +27,25 @@
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import <Foundation/Foundation.h>
+#import "NSObject+SBJSON.h"
+#import "SBJsonWriter.h"
 
-/**
- @brief Adds JSON parsing methods to NSString
- 
-This is a category on NSString that adds methods for parsing the target string.
-*/
-@interface NSString (NSString_SBJSON)
+@implementation NSObject (NSObject_SBJSON)
 
-/**
- @brief Returns the NSDictionary or NSArray represented by the current string's JSON representation.
- 
- Returns the dictionary or array represented in the receiver, or nil on error.
-
- Returns the NSDictionary or NSArray represented by the current string's JSON representation.
- */
-- (id)JSONValue;
+- (NSString *)JSONRepresentation {
+	//NSMutableString *JSONString = [[NSMutableString alloc] initWithString:@""];
+    SBJsonWriter *jsonWriter = [SBJsonWriter new];    
+    NSString *json = [jsonWriter stringWithObject:self];
+	
+//	SBJsonWriter *jsonWriter = [[SBJsonWriter alloc] init];
+//	[jsonWriter appendDictionary: self into: JSONString];
+	
+	
+    if (!json)
+        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
+    [jsonWriter release];
+    return json;
+	// return [JSONString autorelease];
+}
 
 @end

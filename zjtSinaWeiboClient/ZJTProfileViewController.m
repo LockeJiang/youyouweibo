@@ -63,7 +63,7 @@ enum {
     if(screenName){
         [[WeiBoMessageManager getInstance] getUserInfoWithScreenName:self.screenName];
     }
-    if ([self.title isEqualToString:@"我的微博"]) {
+    if ([self.title isEqualToString:@"我的账户"]) {
         self.user = [ZJTHelpler getInstance].user;
         followButton.hidden = YES;
     }
@@ -104,7 +104,7 @@ enum {
     if (!user) {
         return;
     }
-    if (![self.title isEqualToString:@"我的微博"]) {
+    if (![self.title isEqualToString:@"我的账户"]) {
         self.title = user.screenName;
     }
     NSString *title = nil;
@@ -223,7 +223,7 @@ enum {
         [table reloadData];
     }
     
-    if ([self.title isEqualToString:@"我的微博"]) {
+    if ([self.title isEqualToString:@"我的账户"]) {
         return;
     }
     User *theUser = sender.object;

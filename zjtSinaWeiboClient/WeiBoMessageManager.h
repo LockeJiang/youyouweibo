@@ -104,6 +104,9 @@
 //获取最新的提到登录用户的微博列表，即@我的微博
 #define MMSinaGotMetionsStatuses @"MMSinaGotMetionsStatuses"
 
+//获取最新的提到登录用户的微博列表，即@我的微博
+#define MMSinaGotNearbyStatuses @"MMSinaGotNearbyStatuses"
+
 //获取附近地点
 //返回成员为POI的NSArray
 #define MMSinaGotPois @"MMSinaGotPois"
@@ -222,6 +225,9 @@
 
 //获取附近地点
 -(void)getPoisWithCoodinate:(CLLocationCoordinate2D)coodinate queryStr:(NSString*)queryStr;
+
+//获取附近的微博列表，即附近的微博
+-(void)getNearbyStatuses:(CLLocationCoordinate2D)coodinate;
 
 //搜索某一话题下的微博
 -(void)searchTopic:(NSString *)queryStr count:(int)count page:(int)page;

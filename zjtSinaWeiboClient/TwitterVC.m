@@ -178,6 +178,12 @@
     TVBackView.image = [[UIImage imageNamed:@"input_window.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:15];
     
     [manager getMetionsStatuses];
+    //解决view被导航栏遮挡问题
+    if(([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+        self.extendedLayoutIncludesOpaqueBars = NO;
+        self.modalPresentationCapturesStatusBarAppearance = NO;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated

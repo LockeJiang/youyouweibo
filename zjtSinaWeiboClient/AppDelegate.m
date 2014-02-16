@@ -38,14 +38,14 @@
     
     BilateralTableViewController *bilateral = [[[BilateralTableViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
     FirstViewController *firstViewController = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
-    MetionsStatusesVC *m = [[MetionsStatusesVC alloc]initWithNibName:@"FirstViewController" bundle:nil];
-    ZJTProfileViewController *profile = [[[ZJTProfileViewController alloc] initWithNibName:@"ZJTProfileViewController" bundle:nil] autorelease ];
+    MetionsStatusesVC *m = [[MetionsStatusesVC alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    //ZJTProfileViewController *profile = [[[ZJTProfileViewController alloc] initWithNibName:@"ZJTProfileViewController" bundle:nil] autorelease ];
     //FollowAndFansVC *followingVC = [[[FollowAndFansVC alloc] initWithNibName:@"FollowAndFansVC" bundle:nil] autorelease];
     SettingVC *settingVC = [[[SettingVC alloc] initWithNibName:@"SettingVC" bundle:nil] autorelease];
     
     //followingVC.title = @"好友";
     m.title = @"消息";
-    profile.title = @"我的微博";
+    //profile.title = @"我的账户";
     bilateral.title = @"朋友圈";
     firstViewController.title = @"关注";
     
@@ -53,7 +53,7 @@
     UINavigationController *nav2 = [[[UINavigationController alloc] initWithRootViewController:firstViewController] autorelease];
     UINavigationController *nav3 = [[[UINavigationController alloc] initWithRootViewController:m] autorelease];
    //  UINavigationController *nav3 = [[[UINavigationController alloc] initWithRootViewController:followingVC] autorelease];
-   // UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:profile] autorelease];
+    //UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:profile] autorelease];
     UINavigationController *nav4 = [[[UINavigationController alloc] initWithRootViewController:settingVC] autorelease];
     
     

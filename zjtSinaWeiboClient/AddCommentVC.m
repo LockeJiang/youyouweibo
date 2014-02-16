@@ -97,10 +97,10 @@
     [[WeiBoMessageManager getInstance] repost:weiboID content:contentV.text withComment:0];
 }
 
-//回复微博
+//评论微博
 -(void)commentStatus
 {
-//    [[WeiBoMessageManager getInstance]
+    [[WeiBoMessageManager getInstance] commentAStatus:weiboID content:contentV.text];
 }
 
 //回复评论

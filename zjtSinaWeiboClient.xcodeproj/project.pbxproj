@@ -188,13 +188,14 @@
 		ABFBB6F51595A13C00F3B265 /* StatusCDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFBB6F41595A13C00F3B265 /* StatusCDItem.m */; };
 		ABFDE1FB14B5A0EC00B57C9F /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFDE1F914B5A0EC00B57C9F /* StatusCell.m */; };
 		F10BAB3818A6784A002D2F17 /* BilateralTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F10BAB3718A6784A002D2F17 /* BilateralTableViewController.m */; };
+		F11A115118AF4A05006E1D7A /* NearbyStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A115018AF4A05006E1D7A /* NearbyStatusViewController.m */; };
 		F11B15D618AA5D91002B4B11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11B15D518AA5D91002B4B11 /* Images.xcassets */; };
+		F11FECBE18AFC8B900096ED6 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FECB518AFC8B900096ED6 /* NSObject+SBJSON.m */; };
+		F11FECBF18AFC8B900096ED6 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FECB718AFC8B900096ED6 /* NSString+SBJSON.m */; };
+		F11FECC018AFC8B900096ED6 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FECB918AFC8B900096ED6 /* SBJsonBase.m */; };
+		F11FECC118AFC8B900096ED6 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FECBB18AFC8B900096ED6 /* SBJsonParser.m */; };
+		F11FECC218AFC8B900096ED6 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F11FECBD18AFC8B900096ED6 /* SBJsonWriter.m */; };
 		F1594827189D60420077C102 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1594826189D60420077C102 /* Default-568h@2x.png */; };
-		F1BC360618AA716200C7085B /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BC35FD18AA716200C7085B /* NSObject+SBJSON.m */; };
-		F1BC360718AA716200C7085B /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BC35FF18AA716200C7085B /* NSString+SBJSON.m */; };
-		F1BC360818AA716200C7085B /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BC360118AA716200C7085B /* SBJsonBase.m */; };
-		F1BC360918AA716200C7085B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BC360318AA716200C7085B /* SBJsonParser.m */; };
-		F1BC360A18AA716200C7085B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F1BC360518AA716200C7085B /* SBJsonWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -462,19 +463,21 @@
 		ABFDE21114B5A25100B57C9F /* publish_button_32.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = publish_button_32.gif; sourceTree = "<group>"; };
 		F10BAB3618A6784A002D2F17 /* BilateralTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BilateralTableViewController.h; sourceTree = "<group>"; };
 		F10BAB3718A6784A002D2F17 /* BilateralTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BilateralTableViewController.m; sourceTree = "<group>"; };
+		F11A114F18AF4A04006E1D7A /* NearbyStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyStatusViewController.h; sourceTree = "<group>"; };
+		F11A115018AF4A05006E1D7A /* NearbyStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyStatusViewController.m; sourceTree = "<group>"; };
 		F11B15D518AA5D91002B4B11 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F11FECB318AFC8B900096ED6 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		F11FECB418AFC8B900096ED6 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		F11FECB518AFC8B900096ED6 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		F11FECB618AFC8B900096ED6 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		F11FECB718AFC8B900096ED6 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		F11FECB818AFC8B900096ED6 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		F11FECB918AFC8B900096ED6 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		F11FECBA18AFC8B900096ED6 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		F11FECBB18AFC8B900096ED6 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		F11FECBC18AFC8B900096ED6 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		F11FECBD18AFC8B900096ED6 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		F1594826189D60420077C102 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F1BC35FB18AA716200C7085B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/JSON.h"; sourceTree = "<group>"; };
-		F1BC35FC18AA716200C7085B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/NSObject+SBJSON.h"; sourceTree = "<group>"; };
-		F1BC35FD18AA716200C7085B /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/NSObject+SBJSON.m"; sourceTree = "<group>"; };
-		F1BC35FE18AA716200C7085B /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SBJSON.h"; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/NSString+SBJSON.h"; sourceTree = "<group>"; };
-		F1BC35FF18AA716200C7085B /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SBJSON.m"; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/NSString+SBJSON.m"; sourceTree = "<group>"; };
-		F1BC360018AA716200C7085B /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonBase.h; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonBase.h"; sourceTree = "<group>"; };
-		F1BC360118AA716200C7085B /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonBase.m; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonBase.m"; sourceTree = "<group>"; };
-		F1BC360218AA716200C7085B /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonParser.h"; sourceTree = "<group>"; };
-		F1BC360318AA716200C7085B /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonParser.m"; sourceTree = "<group>"; };
-		F1BC360418AA716200C7085B /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonWriter.h"; sourceTree = "<group>"; };
-		F1BC360518AA716200C7085B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "../../../../Downloads/zjtSinaWeiboClient-master/zjtSinaWeiboClient/SBJson/SBJsonWriter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +590,8 @@
 				AB01D19C159A0F5D00F15885 /* HotTrendsVC.m */,
 				AB3CCCB715930837002F39ED /* MetionsStatusesVC.h */,
 				AB3CCCB815930837002F39ED /* MetionsStatusesVC.m */,
+				F11A114F18AF4A04006E1D7A /* NearbyStatusViewController.h */,
+				F11A115018AF4A05006E1D7A /* NearbyStatusViewController.m */,
 				AB25586315AB1D5600CF8F4B /* POIViewController.h */,
 				AB25586415AB1D5600CF8F4B /* POIViewController.m */,
 				AB25586515AB1D5600CF8F4B /* POIViewController.xib */,
@@ -889,17 +894,17 @@
 		ABF23F8614B5976900AEEB5C /* SBJson */ = {
 			isa = PBXGroup;
 			children = (
-				F1BC35FB18AA716200C7085B /* JSON.h */,
-				F1BC35FC18AA716200C7085B /* NSObject+SBJSON.h */,
-				F1BC35FD18AA716200C7085B /* NSObject+SBJSON.m */,
-				F1BC35FE18AA716200C7085B /* NSString+SBJSON.h */,
-				F1BC35FF18AA716200C7085B /* NSString+SBJSON.m */,
-				F1BC360018AA716200C7085B /* SBJsonBase.h */,
-				F1BC360118AA716200C7085B /* SBJsonBase.m */,
-				F1BC360218AA716200C7085B /* SBJsonParser.h */,
-				F1BC360318AA716200C7085B /* SBJsonParser.m */,
-				F1BC360418AA716200C7085B /* SBJsonWriter.h */,
-				F1BC360518AA716200C7085B /* SBJsonWriter.m */,
+				F11FECB318AFC8B900096ED6 /* JSON.h */,
+				F11FECB418AFC8B900096ED6 /* NSObject+SBJSON.h */,
+				F11FECB518AFC8B900096ED6 /* NSObject+SBJSON.m */,
+				F11FECB618AFC8B900096ED6 /* NSString+SBJSON.h */,
+				F11FECB718AFC8B900096ED6 /* NSString+SBJSON.m */,
+				F11FECB818AFC8B900096ED6 /* SBJsonBase.h */,
+				F11FECB918AFC8B900096ED6 /* SBJsonBase.m */,
+				F11FECBA18AFC8B900096ED6 /* SBJsonParser.h */,
+				F11FECBB18AFC8B900096ED6 /* SBJsonParser.m */,
+				F11FECBC18AFC8B900096ED6 /* SBJsonWriter.h */,
+				F11FECBD18AFC8B900096ED6 /* SBJsonWriter.m */,
 			);
 			path = SBJson;
 			sourceTree = "<group>";
@@ -1181,13 +1186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABA94F46147FA7F70010C283 /* main.m in Sources */,
+				F11FECC218AFC8B900096ED6 /* SBJsonWriter.m in Sources */,
 				ABA94F4A147FA7F70010C283 /* AppDelegate.m in Sources */,
 				ABA94F4D147FA7F70010C283 /* FirstViewController.m in Sources */,
 				ABF23F5814B5970100AEEB5C /* NSDataAdditions.m in Sources */,
 				ABF23F5914B5970100AEEB5C /* NSDictionaryAdditions.m in Sources */,
 				ABF23F5A14B5970100AEEB5C /* NSStringAdditions.m in Sources */,
 				ABF23F5D14B5971A00AEEB5C /* StringUtil.m in Sources */,
-				F1BC360818AA716200C7085B /* SBJsonBase.m in Sources */,
 				ABF23F9214B5976900AEEB5C /* ASIAuthenticationDialog.m in Sources */,
 				ABF23F9314B5976900AEEB5C /* ASIDataCompressor.m in Sources */,
 				ABF23F9414B5976900AEEB5C /* ASIDataDecompressor.m in Sources */,
@@ -1203,6 +1208,7 @@
 				ABF23FA014B5976900AEEB5C /* User.m in Sources */,
 				ABF23FA114B5976900AEEB5C /* Reachability.m in Sources */,
 				ABF23FB014B5999C00AEEB5C /* OAuthWebView.m in Sources */,
+				F11A115118AF4A05006E1D7A /* NearbyStatusViewController.m in Sources */,
 				ABF23FB214B5999C00AEEB5C /* WeiBoHttpManager.m in Sources */,
 				ABF23FB314B5999C00AEEB5C /* WeiBoMessageManager.m in Sources */,
 				ABF23FC014B59FAE00AEEB5C /* LPBaseCell.m in Sources */,
@@ -1215,10 +1221,10 @@
 				4571CD0C14FD049E00CBEF46 /* ZJTDetailStatusVC.m in Sources */,
 				450CE5A114FD09D50078052E /* ZJTCommentCell.m in Sources */,
 				45C3EE9D1500D42C004A282E /* GifView.m in Sources */,
-				F1BC360A18AA716200C7085B /* SBJsonWriter.m in Sources */,
 				ABAA629E15010BD100D86E3C /* SHKActivityIndicator.m in Sources */,
 				ABAA62A315010CD000D86E3C /* UIDevice+Orientation.m in Sources */,
 				ABAA62A615010CDA00D86E3C /* UILabel+Size.m in Sources */,
+				F11FECBE18AFC8B900096ED6 /* NSObject+SBJSON.m in Sources */,
 				4547F20B1508A8CE0082FD13 /* ZJTHelpler.m in Sources */,
 				4506A7C51509D9D800C47A93 /* PullRefreshTableViewController.m in Sources */,
 				4506A7D51509DCC300C47A93 /* EGORefreshTableHeaderView.m in Sources */,
@@ -1226,7 +1232,6 @@
 				AB57E8B61523517000363B7C /* AddCommentVC.m in Sources */,
 				AB0D19AD1547ED15005EE454 /* FollowerVC.m in Sources */,
 				AB0D19B71547ED51005EE454 /* SettingVC.m in Sources */,
-				F1BC360918AA716200C7085B /* SBJsonParser.m in Sources */,
 				AB0D19C3154820A0005EE454 /* LPFriendCell.m in Sources */,
 				AB2C43791555036000A4BAFD /* ZJTStatusBarAlertWindow.m in Sources */,
 				ABA658F4155A2E6C00BFD728 /* StatusViewContrillerBase.m in Sources */,
@@ -1236,21 +1241,22 @@
 				AB35225F15937DE3001885BE /* ImageCache.xcdatamodeld in Sources */,
 				AB35226C1593806A001885BE /* CoreDataManager.m in Sources */,
 				ABFBB6EF1595A13B00F3B265 /* Images.m in Sources */,
+				F11FECBF18AFC8B900096ED6 /* NSString+SBJSON.m in Sources */,
 				ABFBB6F21595A13B00F3B265 /* UserCDItem.m in Sources */,
 				ABFBB6F51595A13C00F3B265 /* StatusCDItem.m in Sources */,
 				AB01D19E159A0F5D00F15885 /* HotTrendsVC.m in Sources */,
 				AB783D55159B4C2B00C3E688 /* AHHyperlinkScanner.m in Sources */,
 				AB783D56159B4C2B00C3E688 /* AHLinkLexer.l in Sources */,
-				F1BC360718AA716200C7085B /* NSString+SBJSON.m in Sources */,
-				F1BC360618AA716200C7085B /* NSObject+SBJSON.m in Sources */,
 				AB783D57159B4C2B00C3E688 /* AHMarkedHyperlink.m in Sources */,
 				AB783D5B159B4C2B00C3E688 /* JSCoreTextView.m in Sources */,
 				AB783D5C159B4C2B00C3E688 /* JSTwitterCoreTextView.m in Sources */,
 				AB19AB46159ED97100BE7052 /* SVModalWebViewController.m in Sources */,
+				F11FECC018AFC8B900096ED6 /* SBJsonBase.m in Sources */,
 				AB19AB48159ED97100BE7052 /* SVWebViewController.m in Sources */,
 				AB0412CF15A0B08100097385 /* FollowAndFansVC.m in Sources */,
 				AB25585C15AB185F00CF8F4B /* POI.m in Sources */,
 				F10BAB3818A6784A002D2F17 /* BilateralTableViewController.m in Sources */,
+				F11FECC118AFC8B900096ED6 /* SBJsonParser.m in Sources */,
 				AB25586615AB1D5600CF8F4B /* POIViewController.m in Sources */,
 				AB4E61A815AC6B8100FE4BCE /* HotTrendsDetailTableVC.m in Sources */,
 				AB4E61B415AC89E100FE4BCE /* ZJTAddTrendTableViewController.m in Sources */,

@@ -779,6 +779,28 @@
     [request release];
 }
 
+//获取附近的微博
+-(void)getNearbyStatuses:(CLLocationCoordinate2D)coodinate
+{
+    //https://api.weibo.com/2/place/nearby_timeline.json
+    self.authToken = [[NSUserDefaults standardUserDefaults] objectForKey:USER_STORE_ACCESS_TOKEN];
+    NSMutableDictionary     *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       authToken,   @"access_token",
+                                        [NSString stringWithFormat:@"%f",coodinate.latitude],@"lat",
+                                        [NSString stringWithFormat:@"%f",coodinate.longitude],@"long",
+                                        @"2000",@"range",
+                                        @"1",@"sort",
+                                        @"50",@"count",
+                                        nil];
+    NSString                *baseUrl =[NSString  stringWithFormat:@"%@/place/nearby_timeline.json",SINA_V2_DOMAIN];
+    NSURL                   *url = [self generateURL:baseUrl params:params];
+    
+    ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
+    NSLog(@"httpmanager: getNearbyStatuses:url=%@",url);
+    [self setGetUserInfo:request withRequestType:SINAGetNearbyStatuses];
+    [requestQueue addOperation:request];
+    [request release];
+}
 
 //获取附近地点
 -(void)getPoisWithCoodinate:(CLLocationCoordinate2D)coodinate queryStr:(NSString*)queryStr
@@ -1208,13 +1230,6 @@
         [statuesArr release];
     }
     
-    //转发一条微博
-    if (requestType == SinaRepost) {
-        Status* sts = [Status statusWithJsonDictionary:userInfo];
-        if ([delegate respondsToSelector:@selector(didRepost:)]) {
-            [delegate didRepost:sts];
-        }
-    }
     
     //按天返回热门微博转发榜的微博列表
     if (requestType == SinaGetHotRepostDaily) {
@@ -1278,6 +1293,31 @@
         if ([delegate respondsToSelector:@selector(didGetMetionsStatused:)]) {
             [delegate didGetMetionsStatused:statuesArr];
         }
+        [statuesArr release];
+    }
+    
+    //获取附近的微博
+    if (requestType == SINAGetNearbyStatuses) {
+        NSArray *arr = [userInfo objectForKey:@"statuses"];
+        
+        if (arr == nil || [arr isEqual:[NSNull null]])
+        {
+            NSLog(@"htpmanager: SINAGetNearbyStatuses: arr.count:%i", arr.count);
+            return;
+        }
+        
+        NSMutableArray  *statuesArr = [[NSMutableArray alloc]initWithCapacity:0];
+        for (id item in arr) {
+            Status* sts = [Status statusWithJsonDictionary:item];
+            [statuesArr addObject:sts];
+        }
+        if ([delegate respondsToSelector:@selector(didGetNearbyStatused:)]) {
+            [delegate didGetNearbyStatused:statuesArr];
+            NSLog(@"htpmanager respond yes: SINAGetNearbyStatuses: statuesArr.count:%i", statuesArr.count);
+        }
+        
+        NSLog(@"htpmanager: SINAGetNearbyStatuses: statuesArr.count:%i", statuesArr.count);
+
         [statuesArr release];
     }
     
@@ -1364,6 +1404,14 @@
             if ([delegate respondsToSelector:@selector(didCommentAStatus:)]) {
                 [delegate didCommentAStatus:NO];
             }
+        }
+    }
+    
+    //转发一条微博
+    if (requestType == SinaRepost) {
+        Status* sts = [Status statusWithJsonDictionary:userInfo];
+        if ([delegate respondsToSelector:@selector(didRepost:)]) {
+            [delegate didRepost:sts];
         }
     }
 }

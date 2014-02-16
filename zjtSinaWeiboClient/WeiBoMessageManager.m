@@ -185,11 +185,6 @@ static WeiBoMessageManager * instance=nil;
     [httpManager getUserStatusUserID:uid sinceID:sinceID maxID:maxID count:count page:page baseApp:baseApp feature:feature];
 }
 
-//转发一条微博
--(void)repost:(NSString*)weiboID content:(NSString*)content withComment:(int)isComment
-{
-    [httpManager repost:weiboID content:content withComment:isComment];
-}
 
 //按天返回热门微博转发榜的微博列表
 -(void)getHotRepostDaily:(int)count
@@ -227,6 +222,12 @@ static WeiBoMessageManager * instance=nil;
     [httpManager getPoisWithCoodinate:coodinate queryStr:queryStr];
 }
 
+//获取附近的微博
+-(void)getNearbyStatuses:(CLLocationCoordinate2D)coodinate
+{
+    [httpManager getNearbyStatuses:coodinate];
+}
+
 //搜索某一话题下的微博
 -(void)searchTopic:(NSString *)queryStr count:(int)count page:(int)page
 {
@@ -249,6 +250,12 @@ static WeiBoMessageManager * instance=nil;
 -(void)commentAStatus:(NSString*)weiboID content:(NSString*)content
 {
     [httpManager commentAStatus:weiboID content:content];
+}
+
+//转发一条微博
+-(void)repost:(NSString*)weiboID content:(NSString*)content withComment:(int)isComment
+{
+    [httpManager repost:weiboID content:content withComment:isComment];
 }
 
 #pragma mark - WeiBoHttpDelegate
@@ -425,6 +432,12 @@ static WeiBoMessageManager * instance=nil;
 -(void)didgetPois:(NSArray *)poisArr
 {
     NSNotification *notification = [NSNotification notificationWithName:MMSinaGotPois object:poisArr];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
+}
+
+-(void)didGetNearbyStatused:(NSArray *)statusArr
+{
+    NSNotification *notification = [NSNotification notificationWithName:MMSinaGotNearbyStatuses object:statusArr];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 

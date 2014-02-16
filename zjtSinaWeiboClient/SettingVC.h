@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FollowAndFansVC.h"
+#import "ZJTProfileViewController.h"
 
 @interface SettingVC : UITableViewController<UIAlertViewDelegate>
 
